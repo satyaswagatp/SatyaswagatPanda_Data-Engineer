@@ -1,1 +1,7 @@
 # SatyaswagatPanda_Data-Engineer
+ To downloading the XML file, parsing through to find the first download link whose file_type is DLTINS and downloading the corresponding ZIP file, and then extracting the XML file from the ZIP file.
+ This code downloads the XML file from the given URL, parses through the XML to find the first download link whose file_type is DLTINS, and then downloads the corresponding ZIP file. Finally, it extracts the XML file from the ZIP file. You can add error handling, logging, and unit tests to this code to make it more robust.
+
+Once you have the XML file, you can use the pandas library to read the XML file and convert it to a CSV file with the required columns. Then, you can use the boto3 library to upload the CSV file to an S3 bucket.
+This code reads the XML file using the xml.etree.ElementTree library, iterates over the FinInstrmGnlAttrbts elements, extracts the required data and stores it in a pandas DataFrame. Finally, it writes the DataFrame to a CSV file. You can modify this code to handle errors, add logging, and write unit tests.
+This code defines a lambda_handler function that reads the XML file, extracts the required data, and stores it in a CSV file. Then, it uploads the CSV file to an S3 bucket using the boto3 library. You can modify this code to use your AWS credentials, add error handling, and test the function locally before deploying it as a Lambda function.
